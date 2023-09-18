@@ -17,6 +17,6 @@ jobs:
         # 登录阿里云镜像仓库
         docker login --username=${{ secrets.DOCKERZH }} --password=${{ secrets.DOCKERKEY }}
         # 使用Dockerfile构建镜像
-        DOCKER_BUILDKIT=1 docker build -f deploy/docker/Dockerfile -t lowcoder-ce .
+        DOCKER_BUILDKIT=1 docker build -f deploy/docker/Dockerfile -t dqk520/lowcoder .
         # 推送镜像到镜像仓库
-        docker push lowcoder-ce
+        docker push dqk520/lowcoder
