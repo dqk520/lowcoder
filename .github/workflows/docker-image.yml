@@ -17,6 +17,6 @@ jobs:
         # 登录阿里云镜像仓库
         docker login --username=${{ secrets.DOCKERZH }} --password=${{ secrets.DOCKERKEY }}
         # 使用Dockerfile构建镜像
-        DOCKER_BUILDKIT=1 docker build -f deploy/docker/Dockerfile -t lowcoderorg/lowcoder-ce .
+        DOCKER_BUILDKIT=1 docker build -f deploy/docker/Dockerfile -t lowcoder-ce .
         # 推送镜像到镜像仓库
-        docker push registry.cn-shenzhen.aliyuncs.com/devan/hanlp-jupyterlab
+        docker push lowcoder-ce
