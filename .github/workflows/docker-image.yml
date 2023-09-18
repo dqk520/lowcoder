@@ -2,8 +2,7 @@
 name: Docker Image CI
 
 on:
-  watch:
-    types: started
+  workflow_dispatch:
 
 jobs:
   build:
